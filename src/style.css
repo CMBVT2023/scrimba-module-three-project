@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+
+.titleCardDiv {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 8px 20px 8px 20px;
+    
+    background: rgb(103,34,128);
+    background: linear-gradient(90deg, rgba(103,34,128,1) 0%, rgba(166,38,211,1) 100%);
+}
+
+.titleCardDiv > h1 {
+    font-size: 21px;
+    color: white;
+}
+
+.titleCardDiv > img {
+    width: 31px;
+    height: 25px;
+}

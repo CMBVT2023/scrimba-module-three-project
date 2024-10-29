@@ -7,22 +7,28 @@ body {
     margin: 0;
 }
 
-.titleCardDiv {
+.titleCardHeader {
     display: flex;
-    gap: 10px;
     align-items: center;
-    padding: 8px 20px 8px 20px;
+    padding: 20px;
     
     background: rgb(103,34,128);
     background: linear-gradient(90deg, rgba(103,34,128,1) 0%, rgba(166,38,211,1) 100%);
-}
-
-.titleCardDiv > h1 {
-    font-size: 21px;
     color: white;
 }
 
-.titleCardDiv > img {
+.header--h1 {
+    font-size: 1.25rem;
+    margin-right: auto;
+}
+
+.header--h4 {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.header--image {
     width: 31px;
     height: 25px;
+    margin-right: 6px;
 }

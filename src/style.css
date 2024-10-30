@@ -43,6 +43,11 @@ main {
     gap: 17px;
 }
 
+.form div {
+    display: flex;
+    flex-direction: column;
+}
+
 .form--input {
     font-family: "Karla", sans-serif;
     border-radius: 5px;

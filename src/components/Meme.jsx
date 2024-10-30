@@ -1,18 +1,24 @@
 import React from 'react'
+import memeData from '../memeData.js'
 
 export function Meme() {
+    function getMemeImage() {
+        let memeArray = memeData.data.memes;
+        let {url: randomImageUrl} = memeArray[Math.floor(Math.random() * memeArray.length)]
+        console.log(randomImageUrl)
+    }
+
     return (
         <main>
-            <form className='form'>
+            <div className='form'>
                 <div>
-                    <label>
-                        Top Text
+                    <label htmlFor='top-text'>Top Text</label>
                         <input 
+                            id='top-text'
                             type="text" 
                             placeholder='Shut up'
                             className='form--input'
                         />
-                    </label>
                 </div>
                 <div>
                     {/* Either label method works */}
@@ -26,10 +32,11 @@ export function Meme() {
                 </div>
                 <button
                     className='form--button'
+                    onClick={getMemeImage}
                 >
                     Get a new meme image 🖼
                 </button>
-            </form>
+            </div>
 
         </main>
     )

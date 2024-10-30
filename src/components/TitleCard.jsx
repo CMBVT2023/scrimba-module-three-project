@@ -1,5 +1,5 @@
 import React from 'react'
-import trollFace from './images/troll-face.png'
+import trollFace from '../images/troll-face.png'
 
 export function TitleCard() {
     return (

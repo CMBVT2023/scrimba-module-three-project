@@ -32,3 +32,26 @@ body {
     height: 25px;
     margin-right: 6px;
 }
+
+.meme--div {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.meme--input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 40%;
+}
+
+.meme--button {
+    margin: 10px;
+    width: 488px;
+    height: 40px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: white;
+}

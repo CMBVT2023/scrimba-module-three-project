@@ -4,16 +4,26 @@ export function Meme() {
     return (
         <main>
             <form className='form'>
-                <input 
-                    type="text" 
-                    placeholder='Top Text'
-                    className='form--input'
-                />
-                <input 
-                    type="text" 
-                    placeholder='Bottom Text'
-                    className='form--input'
-                />
+                <div>
+                    <label>
+                        Top Text
+                        <input 
+                            type="text" 
+                            placeholder='Shut up'
+                            className='form--input'
+                        />
+                    </label>
+                </div>
+                <div>
+                    {/* Either label method works */}
+                    <label htmlFor='bottom-text'>Bottom Text</label>
+                        <input
+                            id='bottom-text'
+                            type="text"
+                            placeholder='And take my money'
+                            className='form--input'
+                        />
+                </div>
                 <button
                     className='form--button'
                 >

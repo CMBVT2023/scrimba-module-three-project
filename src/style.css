@@ -9,6 +9,8 @@ body {
 
 main {
     padding: 36px;
+    display: flex;
+    flex-direction: column;
 }
 
 .titleCardHeader {
@@ -64,4 +66,11 @@ main {
     color: white;
     border: none;
     cursor: pointer;
+}
+
+main img {
+    width: 268px;
+    margin-top: 20px;
+
+    align-self: center;
 }

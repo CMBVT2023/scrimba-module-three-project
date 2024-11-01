@@ -9,8 +9,6 @@ body {
 
 main {
     padding: 36px;
-    display: flex;
-    flex-direction: column;
 }
 
 .titleCardHeader {
@@ -68,9 +66,6 @@ main {
     cursor: pointer;
 }
 
-main img {
-    width: 268px;
-    margin-top: 20px;
-
-    align-self: center;
+.meme--image {
+    max-width: 100%;
 }

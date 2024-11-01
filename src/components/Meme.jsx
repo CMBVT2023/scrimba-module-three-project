@@ -40,7 +40,7 @@ export function Meme() {
                 </button>
             </div>
 
-            <img src={memeImage} />
+            <img src={memeImage} className='meme--image'/>
         </main>
     )
 }

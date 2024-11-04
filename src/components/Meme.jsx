@@ -20,6 +20,14 @@ export function Meme() {
         });
     }
 
+    function handleChange(event) {
+        const { name, value } = event.target;
+        setMeme(prevData => ({
+            ...prevData,
+            [name]: value
+        }))
+    }
+
     return (
         <main>
             <div className='form'>
@@ -30,16 +38,20 @@ export function Meme() {
                             type="text" 
                             placeholder='Shut up'
                             className='form--input'
-                        />
+                            onChange={handleChange}
+                            name="topText"
+                            />
                 </div>
                 <div>
                     {/* Either label method works */}
                     <label htmlFor='bottom-text'>Bottom Text</label>
                         <input
+                            onChange={handleChange}
                             id='bottom-text'
                             type="text"
                             placeholder='And take my money'
                             className='form--input'
+                            name="bottomText"
                         />
                 </div>
                 <button
@@ -50,7 +62,11 @@ export function Meme() {
                 </button>
             </div>
 
-            <img src={meme.randomImage} className='meme--image'/>
+            <div className='meme'>
+                <img src={meme.randomImage} className='meme--image'/>
+                <h2 className='meme--text top'>{meme.topText}</h2>
+                <h2 className='meme--text bottom'>{meme.bottomText}</h2>
+            </div>
         </main>
     )
 }

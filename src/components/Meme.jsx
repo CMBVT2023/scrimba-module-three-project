@@ -9,7 +9,8 @@ export function Meme() {
         randomImage: "http://i.imgflip.com/1bij.jpg"
     });
 
-    useEffect(() => {
+    // Method chaining implementation
+    /* useEffect(() => {
         fetch("https://api.imgflip.com/get_memes")
         .then(response => {
             if (!response.ok) throw new Error('Fetch call failed.');
@@ -17,6 +18,22 @@ export function Meme() {
         })
         .then(({data}) => setAllMemes(data.memes))
         .catch((error) => console.error(error))
+    }, []) */
+
+    // Async and Await method
+    useEffect(() => {
+        async function fetchMeme() {
+            try {
+                let response = await fetch("https://api.imgflip.com/get_memes");
+                if (!response.ok) throw new Error('Fetch call failed.');
+                let { data } = await response.json()
+                setAllMemes(data.memes)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        fetchMeme()
     }, [])
 
     function getMemeImage() {

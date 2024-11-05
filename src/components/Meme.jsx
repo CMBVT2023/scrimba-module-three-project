@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import memeData from '../memeData.js'
 
 export function Meme() {
     const [allMemes, setAllMemes] = useState([]);
